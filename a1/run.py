@@ -52,7 +52,9 @@ def main():
         for p in range(len(path)): 
             state, action = path[p]
             print(f'\t\tStep {p+1})\t{state} --> {action}\n')
-
+            
+    if args.algo == "ids" or args.algo == "all":
+        path, g, e, f = ids(start, goal, domain)
         print(f'''
             Domain: WGC | Algorithm: IDS
             Solution cost: {len(path) - 1} | Depth: {len(path) - 1}
