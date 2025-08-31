@@ -16,16 +16,15 @@ def bfs(start, goal, gen_actions):
         expanded += 1   # expanded a node
 
         if state == goal:
-            return path, generated, expanded, max_frontier
+            return path[1:], generated, expanded, max_frontier
 
         actions = gen_actions(state)
-
         for a in actions:
             generated += 1 
             if a not in visited:
-                # print('add to queue:', a, path + [a])
                 visited.add(a)
-                q.put((a, path + [a]))
+                q.put((a, path + [(state, a)]))
+                # q.put((a, path + [a]))
 
 def depth_limited_dfs(state, goal, limit, path, visited, gen_actions):
     expanded = 1   # visiting this node
@@ -41,7 +40,7 @@ def depth_limited_dfs(state, goal, limit, path, visited, gen_actions):
         generated += 1
         if a not in visited:
             visited.add(a)
-            found_path, g, e, m = depth_limited_dfs(a, goal, limit - 1, path + [a], visited, gen_actions)
+            found_path, g, e, m = depth_limited_dfs(a, goal, limit - 1, path + [(state, a)], visited, gen_actions)
             generated += g
             expanded += e
             max_frontier = max(max_frontier, m)
@@ -63,5 +62,5 @@ def ids(start, goal, gen_actions):
         max_frontier = max(max_frontier, m)
 
         if found_path:
-            return found_path, generated, expanded, max_frontier
+            return found_path[1:], generated, expanded, max_frontier
         depth_limit += 1

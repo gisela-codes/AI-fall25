@@ -48,17 +48,20 @@ def main():
             Domain: WGC | Algorithm: BFS
             Solution cost: {len(path) - 1} | Depth: {len(path) - 1}
             Nodes generated: {g} | Nodes expanded: {e} | Max frontier: {f}
-            Path: {path}
-        ''')
-    if args.algo == "ids" or args.algo == "all":
-        path, g, e, f = ids(start, goal, domain)
-    
+            Path:''')
+        for p in range(len(path)): 
+            state, action = path[p]
+            print(f'\t\tStep {p+1})\t{state} --> {action}\n')
+
         print(f'''
             Domain: WGC | Algorithm: IDS
             Solution cost: {len(path) - 1} | Depth: {len(path) - 1}
             Nodes generated: {g} | Nodes expanded: {e} | Max frontier: {f}
-            Path: {path}
-        ''')
+            Path:''')
+        for p in range(len(path)): 
+            state, action = path[p]
+            print(f'\t\tStep {p+1})\t{state} --> {action}\n')
+                
 
 #python3 run.py -a ids    
 if __name__ == "__main__":
