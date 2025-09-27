@@ -14,7 +14,6 @@ def Transition(state, action):
     new_state[pos] = state[action]
     new_state[action] = 0
     return tuple(new_state)
-    
 
 def GoalTest(state):
     # check if the current state is the goal
@@ -25,7 +24,7 @@ def GoalTest(state):
 def StepCost(state, action, next_state):
     return 1
 
-def Heuristic(state):
+def Manhattan(state):
     manhattan = 0
     for i in range(9): 
         t = state[i]
@@ -44,8 +43,11 @@ def Misplaced(state):
             misplaced += 1
     return misplaced
 
-def astar(start):
-    frontier = [(Heuristic(start), 0, start)]
+def UCS(state):
+    return 0
+
+def astar(start, heuristic):
+    frontier = [(heuristic(start), 0, start)]
     came_from = {} 
     best_g = {start: 0}
     nodes_expanded = 0          
@@ -78,7 +80,7 @@ def astar(start):
             if ng < best_g.get(ns, float('inf')):
                 best_g[ns] = ng
                 came_from[ns] = s
-                heapq.heappush(frontier, (ng + Heuristic(ns), ng, ns))
+                heapq.heappush(frontier, (ng + heuristic(ns), ng, ns))
 
         if len(frontier) > max_frontier_size:
             max_frontier_size = len(frontier)
@@ -90,4 +92,3 @@ def astar(start):
         "solution_cost": None
     }
 
-print(astar((1,2,3,4,5,6,0,7,8)))
