@@ -1,6 +1,6 @@
 import argparse
 from Puzzle import *
-from test_Puzzle import solvable_30
+from test_puzzle import solvable_30
 def main():
     parser = argparse.ArgumentParser(
         description="8 Puzzle Solver"
@@ -43,6 +43,6 @@ def main():
             print(f"Nodes expanded: {stats['nodes_expanded']}")
             print(f"Nodes generated: {stats['nodes_generated']}")
             print(f"Max frontier size: {stats['max_frontier_size']}")
-            
+
 if __name__ == "__main__":
     main()

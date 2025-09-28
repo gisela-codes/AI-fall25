@@ -34,4 +34,4 @@ This will evaluate UCS, Misplaced, and Manhattan on each puzzle.
 | -------------------- | ----------------------------------------------------------- | --------------------------- |---------------------|
 | `--start` / `-s`     | Provide 9 integers as the start state                       | `--start 1 2 3 4 5 6 0 7 8` | `0 1 2 3 4 5 6 7 8` |
 | `--heuristic`        | Choose heuristic: `ucs`, `misplaced`, `manhattan`, or `all` | `--heuristic manhattan`     | `all`               |
-| `--all-tests`        | Run all 30 test puzzles from `test_puzzle.py`               | `--all-tests`               |                     |
+| `--all-tests`        | Run all 30 test puzzles from                                | `--all-tests`               |                     |
