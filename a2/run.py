@@ -1,5 +1,5 @@
 import argparse
-from Puzzle import *
+from puzzle import *
 from test_puzzle import solvable_30
 def main():
     parser = argparse.ArgumentParser(
