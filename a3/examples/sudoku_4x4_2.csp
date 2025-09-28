@@ -1,0 +1,55 @@
+NAME: 4x4 Sudoku
+DESC: 4x4 Sudoku with 2x2 subgrids
+
+VARS:
+  R1C1: range(1,4)
+  R1C2: range(1,4)
+  R1C3: range(1,4)
+  R1C4: range(1,4)
+
+  R2C1: range(1,4)
+  R2C2: range(1,4)
+  R2C3: range(1,4)
+  R2C4: range(1,4)
+
+  R3C1: range(1,4)
+  R3C2: range(1,4)
+  R3C3: range(1,4)
+  R3C4: range(1,4)
+
+  R4C1: range(1,4)
+  R4C2: range(1,4)
+  R4C3: range(1,4)
+  R4C4: range(1,4)
+
+CONS:
+  # Row constraints
+  alldiff(R1C1,R1C2,R1C3,R1C4)
+  alldiff(R2C1,R2C2,R2C3,R2C4)
+  alldiff(R3C1,R3C2,R3C3,R3C4)
+  alldiff(R4C1,R4C2,R4C3,R4C4)
+
+  # Column constraints
+  alldiff(R1C1,R2C1,R3C1,R4C1)
+  alldiff(R1C2,R2C2,R3C2,R4C2)
+  alldiff(R1C3,R2C3,R3C3,R4C3)
+  alldiff(R1C4,R2C4,R3C4,R4C4)
+
+  # 2x2 block constraints
+  alldiff(R1C1,R1C2,R2C1,R2C2)
+  alldiff(R1C3,R1C4,R2C3,R2C4)
+  alldiff(R3C1,R3C2,R4C1,R4C2)
+  alldiff(R3C3,R3C4,R4C3,R4C4)
+
+  # This set yields a valid puzzle with at least one solution.
+  in(R1C1,[4])
+  in(R1C2,[1])
+  in(R1C4,[3])
+  in(R2C2,[2])
+  in(R2C4,[1])
+  in(R3C1,[1])
+  in(R3C2,[4])
+  in(R4C3,[1])
+  in(R4C4,[4])
+
+
