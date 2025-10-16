@@ -1,0 +1,7 @@
+pip
+smolagents
+dotenv
+openai
+pandas
+numpy
+scikit-learn
