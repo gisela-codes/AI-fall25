@@ -9,14 +9,12 @@ Assumes the dataset columns:
   query_id, query_text, candidate_id, candidate_text,
   baseline_rank, baseline_score, gold_label
 """
-import time
 import pandas as pd
 import numpy as np
 from sklearn.metrics import ndcg_score
 import matplotlib.pyplot as plt
 import seaborn as sns
 from api import query_ai
-from openai import RateLimitError
 
 # ---------------------------------------------------------------------
 # Metric helpers
@@ -48,8 +46,7 @@ def ndcg_at_k(labels, k):
     idcg = np.sum(ideal_gains * discounts)
     return 0.0 if idcg == 0 else dcg / idcg
 
-
-def rerank(model):
+def load_csv():
     # ---------------------------------------------------------------------
     # 1. Load data
     # ---------------------------------------------------------------------
@@ -57,25 +54,19 @@ def rerank(model):
 
     # Ensure results are ordered by the baseline rank
     df.sort_values(["query_id", "baseline_rank"], inplace=True)
-    # df = df.iloc[:13, :]
+    q_ids = [10, 11, 12, 13]
+    df = df[df["query_id"].isin(q_ids)] # ----uncomment this line out for testing-----
     # print(df)
+
+def rerank(model, df):
     # ---------------------------------------------------------------------
     # 2. Query LLM and save scores
     # ---------------------------------------------------------------------
     scores = []
     for q_text, c_text in df[["query_text", "candidate_text"]].itertuples(index=False):
-        for attempt in range(3):
-            try:
-                score = query_ai(model, q_text, c_text)
-                scores.append(score)
-                print(f"{model}: {score}")
-                break 
-            except RateLimitError:
-                wait = 4 + (2 * attempt)
-                print(f"Rate limited. Retrying in {wait}s...")
-                time.sleep(wait)
-            scores.append(None)
-        time.sleep(1)
+        score = query_ai(model, q_text, c_text)
+        scores.append(score)
+        print(f"{model}: {score}")
 
     df[f"{model}_score"] = scores
 
@@ -109,6 +100,7 @@ def rerank(model):
     ]
     return results
 
+
 def evaluate():
     df = pd.read_csv("results_all_models.csv")
     results=[]
@@ -132,7 +124,7 @@ def evaluate():
         # Query 2: baseline nDCG=0.967, LLM nDCG=0.958
     df_out = pd.DataFrame(results)
     print(df_out)
-    
+
     plt.figure(figsize=(10,5))
     sns.set_palette("husl")
     
@@ -160,7 +152,6 @@ def evaluate():
 
     return df_out
 
-# create a graph where x axis is my queries and graph 3 lines. the baseline nDCG and the two LLM nDCG 
 
     # results.to_csv("results.csv", index=False)
     # ---------------------------------------------------------------------

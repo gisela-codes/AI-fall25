@@ -1,6 +1,6 @@
 import argparse
-from ranking_starter import rerank 
-from ranking_starter import evaluate 
+from a4.ranking import rerank 
+from a4.ranking import evaluate 
 
 import pandas as pd
 def main():
@@ -23,8 +23,8 @@ def main():
             "Examples:\n"
             "  -m gemini-1.5-pro gemini-2.0-flash-lite\n"
             "Supported families:\n"
-            "  • GPT models: gpt-5-nano, gpt-4.1, gpt-4.1-mini, gpt-4.1-nano\n"
-            "  • Gemini models: gemini-2.5-flash, gemini-2.0-flash, gemini-2.0-flash-lite\n"
+            "  - GPT models: gpt-5-nano, gpt-4.1, gpt-4.1-mini, gpt-4.1-nano\n"
+            "  - Gemini models: gemini-2.5-flash, gemini-2.0-flash, gemini-2.0-flash-lite\n"
         )
     )
     parser.add_argument("--eval", action="store_true",
@@ -33,10 +33,15 @@ def main():
     combined = None
     all_results = []
     KEYS=["query_id", "candidate_id"]
+    df = pd.read_csv("rag_sample_queries_candidates.csv")
+    # Ensure results are ordered by the baseline rank
+    df.sort_values(["query_id", "baseline_rank"], inplace=True)
+    q_ids = [10, 11, 12, 13]
+    df = df[df["query_id"].isin(q_ids)] # ----uncomment this line out for testing-----
     if not args.eval:
         for model in args.model:
             print(f"trying {model}")
-            df_model = rerank(model)
+            df_model = rerank(model,df)
             score_col = f"{model}_score"
             rank_col  = f"{model}_rank"
             all_results.append(score_col)
