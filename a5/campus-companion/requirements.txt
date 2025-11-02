@@ -1,0 +1,5 @@
+smolagents
+openai
+ddgs
+bs4
+requests

@@ -1,0 +1,25 @@
+date,start_time,end_time,title,location,category,description,url
+2025-10-21,12:00,13:15,CS 4300: Intelligent Agents (Lecture),SET 203,Academics,Weekly lecture covering agentic AI with tools.,https://computing.utahtech.edu/cs4300
+2025-10-22,19:00,21:00,Trailblazer Volleyball vs. GCU,Burns Arena,Athletics,WAC conference game. Students free with ID.,https://utahtechtrailblazers.com/
+2025-10-23,16:00,17:30,Computing Colloquium: Agentic AI Demos,SET Atrium,Talk,Short demos of ReAct and planning agents from CS courses.,https://computing.utahtech.edu/events/colloquium
+2025-10-23,11:00,14:00,Career Services: Tech Résumé Clinic,Holland 2nd Floor,Career,Drop-in résumé feedback for computing majors.,https://utahtech.edu/career
+2025-10-24,10:00,12:00,Research Roundtable: Applied AI in Southern Utah,SET 120,Research,Faculty/student lightning talks on local AI projects.,https://computing.utahtech.edu/research
+2025-10-25,18:00,20:30,Fall Concert — Symphony Orchestra,Cox Performing Arts Center,Arts,Seasonal performance featuring student ensembles.,https://utahtech.edu/arts
+2025-10-26,09:00,12:00,Service Saturday: Campus Cleanup,Meet at Gardner Plaza,Service,Join volunteers to beautify campus.,https://utahtech.edu/service
+2025-10-28,12:00,13:00,Lunch & Learn: Git for Beginners,SET 215,Workshop,Hands-on intro to Git and GitHub.,https://computing.utahtech.edu/workshops/git
+2025-10-30,15:00,17:00,Model Context Protocol (MCP) Workshop,SET 210,Workshop,Intro to MCP and tool servers; bring a laptop.,https://computing.utahtech.edu/workshops/mcp
+2025-11-01,09:00,16:00,Southern Utah Code Camp,Atwood Innovation Plaza,Community,Regional coding event with prizes and workshops.,https://southernutahcodecamp.com
+2025-11-05,14:00,16:00,AI Ethics Forum,Holland 5th Floor Lecture Hall,Panel,Perspectives on responsible AI at UTU.,https://utahtech.edu/ai-ethics
+2025-11-12,17:30,19:00,Women in Tech Networking,SET Atrium,Community,Meet fellow students and local engineers.,https://utahtech.edu/wit
+2025-11-15,10:00,12:00,Intro to Python for Life Sciences,SET 215,Workshop,Notebook-driven intro tailored for biology professionals.,https://computing.utahtech.edu/workshops/python-life-sciences
+2025-12-02,11:00,12:50,CS 4300 Final Exam,SET 203,Academics,Comprehensive final covering agentic AI.,https://computing.utahtech.edu/cs4300
+2025-10-14,12:30pm,2:30pm,Undisclosed Student Event,"Kenneth N. Gardner Student Center – Courtyard",StudentLife,Student club meeting or open house,https://calendar.utahtech.edu/events/883f7c975af391fbbaa5a4c7b3123080 :contentReference[oaicite:1]{index=1}
+2025-10-21,5:00pm,6:30pm,“Psychology Night - Psychology Club”,"General Classroom Building Room #418",Club/Academics,Meeting of Psychology Club,https://calendar.utahtech.edu/events/4e399eb50d6db96c45e816a6905b847c :contentReference[oaicite:2]{index=2}
+2025-10-30,17:00,19:00,Tricks & Treats Night,"Palm Street (walkway to Burns Arena)",Community,"Annual UTU Halloween community event: trick-or-treating, costume contest, pumpkin walk.",https://utahtech.edu/tricksandtreats/ :contentReference[oaicite:3]{index=3}
+2025-10-10,,,"Innovation Conference – Atwood Innovation Plaza",Research/Community,"Practical guidance on protecting intellectual property & bringing innovations to market.",https://news.utahtech.edu/2025/10/10/innovationconference/ :contentReference[oaicite:4]{index=4}
+2025-10-23,16:00,17:30,Computing Colloquium: Agentic AI Demos,"SET Atrium",Talk,"Short demos of ReAct and planning agents from CS courses.","https://computing.utahtech.edu/events/colloquium"
+2025-10-23,11:00,14:00,Career Services: Tech Résumé Clinic,"Holland 2nd Floor",Career,"Drop-in résumé feedback for computing majors.","https://utahtech.edu/career"
+2025-10-24,10:00,12:00,Research Roundtable: Applied AI in Southern Utah,"SET 120",Research,"Faculty/student lightning talks on local AI projects.","https://computing.utahtech.edu/research"
+2025-10-25,18:00,20:30,Fall Concert — Symphony Orchestra,"Cox Performing Arts Center",Arts,"Seasonal performance featuring student ensembles.","https://utahtech.edu/arts"
+2025-10-28,12:00,13:00,Lunch & Learn: Git for Beginners,"SET 215",Workshop,"Hands-on intro to Git and GitHub.","https://computing.utahtech.edu/workshops/git"
+2025-10-30,18:00,20:30,Another Fall Event (placeholder) ,,,,
