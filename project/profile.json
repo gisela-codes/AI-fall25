@@ -1,0 +1,146 @@
+{
+  "settings": {
+    "default_tone": "professional",
+    "default_length": "standard",
+    "target_roles": ["frontend developer", "full stack developer", "ui/ux engineer"]
+  },
+  "personal_info": {
+    "name": "Gisela M. Benavides Canas",
+    "location": "St. George, UT",
+    "phone": "(385) 881-7124",
+    "email": "giselambenavides@gmail.com",
+    "links": {
+      "linkedin": "https://linkedin.com/in/giselabenavides"
+    }
+  },
+  "summary": {
+    "enabled": true,
+    "original_text": "",
+    "current_text": "",
+    "variants": []
+  },
+  "skills": {
+    "technical": [],
+    "soft": [],
+    "tools": [],
+    "languages": []
+  },
+  "experience": [
+    {
+      "title": "P/T Web Tech",
+      "company": "Utah Tech University",
+      "location": "St. George, Utah",
+      "start_date": "2024-03",
+      "end_date": "Present",
+      "bullets": [
+        {
+          "text": "Designed, developed, and maintained university websites using HTML, CSS, JavaScript, and WordPress.",
+          "tags": ["frontend", "web", "wordpress"],
+          "metrics": {}
+        },
+        {
+          "text": "Collaborated with campus committees and departments to ensure the website reflected the university’s strategic vision, mission, and branding.",
+          "tags": ["stakeholders", "branding", "collaboration"],
+          "metrics": {}
+        },
+        {
+          "text": "Led UI/UX design initiatives by creating wireframes and user flows to optimize user experiences across platforms.",
+          "tags": ["ui-ux", "wireframes", "user-flows"],
+          "metrics": {}
+        },
+        {
+          "text": "Promoted consistent branding by standardizing templates, image archives, and formatting practices across university web properties.",
+          "tags": ["branding", "templates", "design-systems"],
+          "metrics": {}
+        }
+      ]
+    },
+    {
+      "title": "Website Development Intern",
+      "company": "BnBwebsites",
+      "location": "Payson, Utah",
+      "start_date": "2022-01",
+      "end_date": "2022-05",
+      "bullets": [
+        {
+          "text": "Formatted client-provided content for websites.",
+          "tags": ["content", "web"],
+          "metrics": {}
+        },
+        {
+          "text": "Photoshopped over 20 images from clients to accommodate website templates.",
+          "tags": ["photoshop", "image-editing"],
+          "metrics": {
+            "images_edited": 20
+          }
+        },
+        {
+          "text": "QA tested websites to ensure ADA-compliant standards.",
+          "tags": ["qa", "ada", "accessibility"],
+          "metrics": {}
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Sentiment Analysis",
+      "role": "",
+      "term": "Fall 2024",
+      "description": "Analyzed Elon Musk's tweets from 11/26 to 12/03 to determine sentiment trends using vaderSentiment for natural language processing.",
+      "technologies": ["X API", "Pandas", "Matplotlib", "vaderSentiment"],
+      "bullets": [],
+      "link": ""
+    },
+    {
+      "name": "IoT Wearable and iOS App for Tracking Basal Body Temperature",
+      "role": "",
+      "term": "Fall 2024",
+      "description": "Designed a cost-effective IoT wearable device paired with an iOS app to support menstrual cycle tracking via basal body temperature.",
+      "technologies": ["Swift", "Bluetooth Low Energy (BLE)", "Adafruit MLX90614 Library", "PulseSensor Playground"],
+      "bullets": [],
+      "link": ""
+    },
+    {
+      "id": "product-recommendation",
+      "name": "Product Recommendation Web App",
+      "role": "",
+      "term": "Spring 2024",
+      "description": "Created a RESTful web app similar to LinkTree/Amazon Storefront that allows users to build profiles and share affiliate product links.",
+      "technologies": ["Vue", "Express", "MongoDB", "Postman"],
+      "bullets": [],
+      "link": ""
+    },
+    {
+      "id": "clearinghouse-simulator",
+      "name": "Clearinghouse Simulator",
+      "role": "",
+      "term": "Spring 2024",
+      "description": "Developed a financial transaction management simulator using AWS services with support for processing transactions via function URLs.",
+      "technologies": ["AWS Lambda", "DynamoDB"],
+      "bullets": [],
+      "link": ""
+    }
+  ],
+  "education": [
+    {
+      "id": "ut-bsswe",
+      "institution": "Utah Tech University",
+      "degree": "B.S.",
+      "field": "Software Engineering",
+      "location": "St. George, Utah",
+      "graduation_date": "2026-05",
+      "gpa": "3.48",
+      "relevant_coursework": [
+        "Computer Networks",
+        "Web Applications",
+        "Data Structures and Algorithms",
+        "Statistics with Programming",
+        "Software Practices",
+        "Databases"
+      ]
+    }
+  ],
+  "certifications": [],
+  "awards": []
+}

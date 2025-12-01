@@ -1,0 +1,9 @@
+smolagents
+openai
+requests
+smolagents[mcp]
+smolagents
+google-api-python-client
+pandas
+google-auth-httplib2 
+google-auth-oauthlib

@@ -1,0 +1,11 @@
+# Temporary files and snapshots
+__pycache__
+tmp/
+*_snapshot*.html
+indeed_snapshot*.html
+job_search_snapshot.html
+job_listings*.html
+token.json
+.env
+credentials.json
+resumes/*.docx
